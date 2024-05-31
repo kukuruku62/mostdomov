@@ -1,0 +1,32 @@
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  color: var(--color-white-1);
+  font-weight: 700;
+  font-size: 1.5rem;
+  align-self: center;
+  margin-bottom: 10px;
+}
+
+.subTitle {
+  color: var(--color-white-07);
+  font-weight: 500;
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.text {
+  color: var(--color-white-1);
+  font-weight: 500;
+  line-height: 1.5rem;
+  font-size: 1rem;
+}

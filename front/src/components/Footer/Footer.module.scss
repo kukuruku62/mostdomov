@@ -1,0 +1,87 @@
+.footer {
+  background-color: rgb(62, 66, 66);
+  height: auto;
+}
+
+.mainContainer {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  justify-content: space-between;
+  padding: 40px 30px;
+  flex-wrap: wrap;
+
+  @media (max-width: 1240px) {
+    justify-content: space-evenly;
+    row-gap: 40px;
+  }
+
+  @media (max-width: 1024px) {
+    column-gap: 50px;
+    row-gap: 40px;
+  }
+
+  @media (max-width: 568px) {
+    padding: 30px 20px;
+  }
+}
+
+.contactsList {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  row-gap: 30px;
+  flex-wrap: wrap;
+
+  @media (max-width: 1240px) {
+    justify-content: center;
+    flex-direction: row;
+    width: 100%;
+    column-gap: 5%;
+  }
+
+  @media (max-width: 1024px) {
+    row-gap: 10px;
+  }
+}
+
+.contact {
+  display: flex;
+  flex-direction: row;
+  column-gap: 15px;
+  justify-content: center;
+  align-items: center;
+}
+
+.phone,
+.email,
+.hours {
+  color: var(--color-white-1);
+  font-size: 2rem;
+
+  @media (max-width: 768px) {
+    font-size: 1.5rem;
+  }
+}
+
+@media (hover: hover) {
+  .email:hover {
+    text-decoration: underline;
+  }
+}
+
+.icon {
+  min-height: 2rem;
+  width: 2rem;
+  color: var(--color-white-05);
+
+  @media (max-width: 768px) {
+    min-height: 1.5rem;
+    width: 1.5rem;
+  }
+}
