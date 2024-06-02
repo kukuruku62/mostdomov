@@ -4,7 +4,6 @@
 }
 
 .title {
-  color: var(--color-white-1);
   font-weight: 700;
   font-size: 1.5rem;
   align-self: center;
@@ -12,7 +11,6 @@
 }
 
 .subTitle {
-  color: var(--color-white-07);
   font-weight: 500;
   font-size: 1rem;
   margin-bottom: 20px;
@@ -25,8 +23,21 @@
 }
 
 .text {
-  color: var(--color-white-1);
   font-weight: 500;
   line-height: 1.5rem;
   font-size: 1rem;
+}
+
+.darkTheme {
+  .title {
+    color: var(--color-white-1);
+  }
+
+  .subTitle {
+    color: var(--color-white-07);
+  }
+
+  .text {
+    color: var(--color-white-1);
+  }
 }

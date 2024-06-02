@@ -1,10 +1,14 @@
-import { IDataList } from "../../../../types/IFooter";
+import cn from "classnames";
+import { IDataList } from "../../types/IFooter";
 import styles from "./ListData.module.scss";
 
+interface IListDataProps extends IDataList {
+  variant: "ligthTheme" | "darkTheme";
+}
 
-export const ListData = ({ titleList, subtitleList, items }: IDataList) => {
+export const ListData = ({ titleList, subtitleList, items, variant }: IListDataProps) => {
   return (
-    <article className={styles.container}>
+    <article className={cn(styles.container, styles[variant])}>
       <h3 className={styles.title}>{titleList}</h3>
       <p className={styles.subTitle}>{subtitleList}</p>
       <ul>
