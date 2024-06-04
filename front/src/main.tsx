@@ -1,15 +1,16 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-// import App from './App.tsx'
-// import './index.css'
-import "normalize.css"
-import "../src/styles/main.scss"
-import {
-  createBrowserRouter,
-  RouterProvider,
-} from "react-router-dom";
-import { Root } from './Root/Root.tsx';
-import { ErrorPage } from './pages/ErrorPage/ErrorPage.tsx';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "normalize.css";
+import "../src/styles/main.scss";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { Root } from "./Root/Root.tsx";
+import { ErrorPage } from "./pages/ErrorPage/ErrorPage.tsx";
+import { About } from "./pages/About/About.tsx";
+import { StoriesPage } from "./pages/StoriesPage/StoriesPage.tsx";
+import { Offers } from "./pages/Offers/Offers.tsx";
+import { Contacts } from "./pages/Contacts/Contacts.tsx";
+import { MobileHospital } from "./pages/MobileHospital/MobileHospital.tsx";
+import { Transportation } from "./pages/Transportation/Transportation.tsx";
 
 const router = createBrowserRouter([
   {
@@ -17,16 +18,18 @@ const router = createBrowserRouter([
     element: <Root />,
     errorElement: <ErrorPage />,
     children: [
-      {
-        path: "",
-        element: <div>dsfsdf</div>,
-      },
+      { path: "", element: <About /> },
+      { path: "/stories", element: <StoriesPage /> },
+      { path: "/offers", element: <Offers /> },
+      { path: "/hospital", element: <MobileHospital /> },
+      { path: "/transportation", element: <Transportation /> },
+      { path: "/contacts", element: <Contacts /> },
     ],
   },
 ]);
 
-ReactDOM.createRoot(document.getElementById('root')!).render(
+ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
-     <RouterProvider router={router} />
-  </React.StrictMode>,
-)
+    <RouterProvider router={router} />
+  </React.StrictMode>
+);
