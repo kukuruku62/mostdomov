@@ -7,7 +7,6 @@ import { Root } from "./Root/Root.tsx";
 import { ErrorPage } from "./pages/ErrorPage/ErrorPage.tsx";
 import { About } from "./pages/About/About.tsx";
 import { StoriesPage } from "./pages/StoriesPage/StoriesPage.tsx";
-import { Offers } from "./pages/Offers/Offers.tsx";
 import { Contacts } from "./pages/Contacts/Contacts.tsx";
 import { MobileHospital } from "./pages/MobileHospital/MobileHospital.tsx";
 import { Transportation } from "./pages/Transportation/Transportation.tsx";
@@ -20,7 +19,6 @@ const router = createBrowserRouter([
     children: [
       { path: "", element: <About /> },
       { path: "/stories", element: <StoriesPage /> },
-      { path: "/offers", element: <Offers /> },
       { path: "/hospital", element: <MobileHospital /> },
       { path: "/transportation", element: <Transportation /> },
       { path: "/contacts", element: <Contacts /> },

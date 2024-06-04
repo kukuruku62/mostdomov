@@ -1,0 +1,10 @@
+.container {
+  margin: auto;
+  padding: 150px 20px;
+
+  h1 {
+    @media (max-width: 568px) {
+        font-size: 1.7rem;
+    }
+  }
+}
