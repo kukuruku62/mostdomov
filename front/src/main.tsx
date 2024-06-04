@@ -9,7 +9,7 @@ import { About } from "./pages/About/About.tsx";
 import { StoriesPage } from "./pages/StoriesPage/StoriesPage.tsx";
 import { Contacts } from "./pages/Contacts/Contacts.tsx";
 import { MobileHospital } from "./pages/MobileHospital/MobileHospital.tsx";
-import { Transportation } from "./pages/Transportation/Transportation.tsx";
+import { ServicePage } from "./pages/ServicePage/ServicePage.tsx";
 
 const router = createBrowserRouter([
   {
@@ -20,7 +20,7 @@ const router = createBrowserRouter([
       { path: "", element: <About /> },
       { path: "/stories", element: <StoriesPage /> },
       { path: "/hospital", element: <MobileHospital /> },
-      { path: "/transportation", element: <Transportation /> },
+      { path: "/service", element: <ServicePage /> },
       { path: "/contacts", element: <Contacts /> },
     ],
   },
