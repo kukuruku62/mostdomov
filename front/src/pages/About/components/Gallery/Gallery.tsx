@@ -5,14 +5,14 @@ export const Gallery = () => {
   const data = [
     {
       id: useId(),
-      url: "../../../assets/1.webp",
+      url: "/static/images/1.webp",
       name: "Mudr. Zuzana Hajster Vozárová",
       profession: "Odborná garantka, lekárka",
       email: "hajstervozarova@mostdomov.com",
     },
     {
       id: useId(),
-      url: "../../../../assets/1.webp",
+      url: "./static/images/1.webp",
       name: "Mgr. Simona Hornačková, dipl.s.",
       profession: "Zdravotná sestra",
       email: "simona.hornackova@mostdomov.com",
