@@ -28,7 +28,9 @@ export const Gallery = () => {
   ];
 
   return (
-    <section className={styles.container}>
+    <article className={styles.container}>
+      <h2 className={styles.title}>Tím</h2>
+      <span className={styles.lineSeparate}></span>
       <ul>
         {data.map(({ url, name, profession, email, id }) => (
           <li key={id}>
@@ -39,6 +41,6 @@ export const Gallery = () => {
           </li>
         ))}
       </ul>
-    </section>
+    </article>
   );
 };

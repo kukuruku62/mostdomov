@@ -21,7 +21,7 @@ section {
   }
 }
 
-.content {
+.topContent {
   display: flex;
   align-items: center;
   column-gap: 30px;
@@ -82,30 +82,12 @@ section {
   }
 }
 
-.lineSeparate {
-  display: block;
-  margin: 20px auto;
-  width: 40%;
-  height: 1px;
-  background: linear-gradient(
-    to right,
-    rgba(0, 0, 0, 0) 0%,
-    rgba(0, 0, 0, 0.5) 50%,
-    rgba(0, 0, 0, 0) 100%
-  );
+.lowerContent {
+  display: flex;
+  flex-direction: column;
+  row-gap: 50px;
+
+  @media (max-width: 1024px) {
+    row-gap: 30px;
+  }
 }
-
-.highlightBlack {
-  font-weight: 700;
-  font-style: italic;
-  margin-bottom: 30px;
-}
-
-.text {
-  text-indent: 1.5rem;
-  font-size: larger;
-  color: var(--color-darkgreen-text);
-  margin-bottom: 10px;
-}
-
-
