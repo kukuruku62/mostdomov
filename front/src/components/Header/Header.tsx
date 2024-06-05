@@ -106,7 +106,7 @@ export const Header = () => {
         </div>
         <Modal isModalActive={isModalActive} setIsModalActive={setIsModalActive} />
       </header>
-      <Link to={""} className={styles.linkCharity}>
+      <Link to={"/donation"} className={styles.linkCharity}>
         <p>Prosim o podpore nás 2% z daní</p>
       </Link>
     </>

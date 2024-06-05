@@ -10,6 +10,7 @@ import { StoriesPage } from "./pages/StoriesPage/StoriesPage.tsx";
 import { Contacts } from "./pages/Contacts/Contacts.tsx";
 import { MobileHospital } from "./pages/MobileHospital/MobileHospital.tsx";
 import { ServicePage } from "./pages/ServicePage/ServicePage.tsx";
+import { Donation } from "./pages/Donation/Donation.tsx";
 
 const router = createBrowserRouter([
   {
@@ -21,6 +22,7 @@ const router = createBrowserRouter([
       { path: "/stories", element: <StoriesPage /> },
       { path: "/hospital", element: <MobileHospital /> },
       { path: "/service", element: <ServicePage /> },
+      { path: "/donation", element: <Donation /> },
       { path: "/contacts", element: <Contacts /> },
     ],
   },
