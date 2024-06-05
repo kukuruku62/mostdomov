@@ -5,7 +5,7 @@ export const Gallery = () => {
   const data = [
     {
       id: useId(),
-      url: "../../../../assets/img/1.webp",
+      url: "../assets/img/1.webp",
       name: "Mudr. Zuzana Hajster Vozárová",
       profession: "Odborná garantka, lekárka",
       email: "hajstervozarova@mostdomov.com",
@@ -20,7 +20,7 @@ export const Gallery = () => {
 
     {
       id: useId(),
-      url: "../src/assets/img/2.webp",
+      url: "/src/assets/img/2.webp",
       name: "Katarína Habláková",
       profession: "Prevádzková riaditeľka",
       email: "katarina.hablakova@mostdomov.sk",
