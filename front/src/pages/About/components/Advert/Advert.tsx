@@ -7,12 +7,12 @@ export const Advert = () => {
     {
       id: useId(),
       name: "Eurokim",
-      source: "../../../src/assets/img/Eurokim.jpg",
+      source: "static/img/Eurokim.jpg",
     },
     {
       id: useId(),
       name: "Veolia",
-      source: "../../../src/assets/img/Veolia.jpg",
+      source: "static/img/Veolia.jpg",
       link: "https://www.nadaciavs.sk/",
     },
   ];
