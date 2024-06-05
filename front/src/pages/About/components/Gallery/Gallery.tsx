@@ -12,7 +12,7 @@ export const Gallery = () => {
     },
     {
       id: useId(),
-      url: "../../../assets/1.webp",
+      url: "../../../../assets/1.webp",
       name: "Mgr. Simona Hornačková, dipl.s.",
       profession: "Zdravotná sestra",
       email: "simona.hornackova@mostdomov.com",
@@ -20,7 +20,7 @@ export const Gallery = () => {
 
     {
       id: useId(),
-      url: "../assets/1.webp",
+      url: "../../../../assets/img/2.webp",
       name: "Katarína Habláková",
       profession: "Prevádzková riaditeľka",
       email: "katarina.hablakova@mostdomov.sk",
