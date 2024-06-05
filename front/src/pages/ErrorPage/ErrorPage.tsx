@@ -23,7 +23,7 @@ export const ErrorPage: React.FC = () => {
       <h1 >Oops!</h1>
       <p>Táto stránka neexistuje</p>
       <p >
-        {/* <i>{errorMessage}</i> */}
+        <i>{errorMessage}</i>
       </p>
     </div>
   );
