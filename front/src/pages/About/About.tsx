@@ -13,7 +13,7 @@ export const About = () => {
             <h1 className={styles.title}>
               <span className={styles.highlightGreen}>Našou víziou je</span> premieňať umieranie na
               príbehy o dobrej smrti. Aby odchádzanie z tohto sveta bolo
-              <span className={styles.highlightGreen}>v čo najväčšom prijatí a láske.</span>
+              <span className={styles.highlightGreen}> v čo najväčšom prijatí a láske.</span>
             </h1>
           </div>
           <div className={styles.right}></div>

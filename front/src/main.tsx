@@ -3,7 +3,7 @@ import ReactDOM from "react-dom/client";
 import "normalize.css";
 import "../src/styles/main.scss";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import { Root } from "./Root/Root.tsx";
+import { Root } from "./shared/Root/Root.tsx";
 import { ErrorPage } from "./pages/ErrorPage/ErrorPage.tsx";
 import { About } from "./pages/About/About.tsx";
 import { StoriesPage } from "./pages/StoriesPage/StoriesPage.tsx";

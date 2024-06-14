@@ -20,7 +20,7 @@ export const Footer = () => {
             </li>
             <li className={styles.contact}>
               <MdOutlineMailOutline className={styles.icon} />
-              <Link to="mailto:info@mostdomov.sk" target="_blank" rel="noopener noreferrer">
+              <Link to="mailto:info@mostdomov.sk" target="_blank" rel="noopener noreferrer" aria-label="odoslať email">
                 <p className={styles.email}>{contacts.email}</p>
               </Link>
             </li>

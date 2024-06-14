@@ -14,11 +14,11 @@ export const ServicePage = () => {
             ktoré sú navyknutí. V rámci odľahčovacej služby je zabezpečená odborná starostlivosť
             zdravotnou sestrou.
           </p>
-          {serviseData.map(({ title, items }) => (
-            <div className={styles.item}>
+          {serviseData.map(({ title, items }, index) => (
+            <div key={index} className={styles.item}>
               <h3>{title}</h3>
-              {items.map((el) => (
-                <ul>
+              {items.map((el, index) => (
+                <ul key={index}>
                   <li>{el}</li>
                 </ul>
               ))}

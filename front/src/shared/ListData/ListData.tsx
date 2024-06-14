@@ -1,5 +1,5 @@
 import cn from "classnames";
-import { IDataList } from "../../types/IFooter";
+import { IDataList } from "../../types/Footer";
 import styles from "./ListData.module.scss";
 
 interface IListDataProps extends IDataList {

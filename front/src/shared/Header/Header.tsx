@@ -1,45 +1,42 @@
 import Logo from "../../assets/Logo.svg";
 import { Link, NavLink } from "react-router-dom";
-import { useId, useState } from "react";
-import { Modal } from "./components/Modal/Modal";
+import { BurgerButton } from "./components/BurgerButton/BurgerButton";
+import { useState } from "react";
 import styles from "./Header.module.scss";
 
-export const Header = () => {
-  const [isModalActive, setIsModalActive] = useState(false);
 
-  const handleClick = () => {
-    setIsModalActive(!isModalActive);
-  };
+export const Header = () => {
+  const [isModalActive, setIsModalActive] = useState<boolean>(false);
 
   const headerData = [
     {
-      id: useId(),
+      id: "1",
       title: "O Nás",
       link: "/",
     },
     {
-      id: useId(),
+      id: "2",
       title: "Čo vám ponúkame",
       items: [
         {
-          id: useId(),
+          id: "2-1",
           title: "Mobilný hospic",
           link: "/hospital",
         },
         {
-          id: useId(),
+          id: "2-2",
           title: "Odľahčovacia služba",
           link: "/service",
         },
       ],
     },
     {
-      id: useId(),
+      id: "3",
       title: "Príbehy o dobrej smrti",
       link: "/stories",
     },
     {
-      id: useId(),
+      id: "4",
       title: "Kontaktujte nás",
       link: "/contacts",
     },
@@ -52,7 +49,9 @@ export const Header = () => {
           <div className={styles.content}>
             <Link
               to={"/"}
-              className={isModalActive ? `${styles.left} ${styles.active}` : styles.left}>
+              className={isModalActive ? `${styles.left} ${styles.active}` : styles.left}
+              aria-label="prejsť na hlavnú stránku"
+            >
               <div className={styles.logoContainer}>
                 <img className={styles.logo} src={Logo} alt="Logo" />
               </div>
@@ -64,8 +63,7 @@ export const Header = () => {
             <div className={styles.right}>
               <nav>
                 <ul className={styles.listLinks}>
-
-                  {headerData.map(({ title, link, id, items }) => (
+                  {headerData.map(({ id, title, link, items }) => (
                     <li key={id} className={styles.textLink}>
                       {link ? (
                         <NavLink
@@ -76,7 +74,6 @@ export const Header = () => {
                       ) : (
                         <p className={styles.link}>{title}</p>
                       )}
-
                       {items && (
                         <ul className={styles.dropdown}>
                           {items.map(({ title, link, id }) => (
@@ -90,25 +87,16 @@ export const Header = () => {
                       )}
                     </li>
                   ))}
-
                 </ul>
               </nav>
             </div>
-            <div
-              className={`${styles.iconModal} ${isModalActive ? styles.active : ""}`}
-              onClick={handleClick}
-            >
-              <span></span>
-              <span></span>
-              <span></span>
-            </div>
+            <BurgerButton isModalActive={isModalActive} setIsModalActive={setIsModalActive} />
           </div>
         </div>
-        <Modal isModalActive={isModalActive} setIsModalActive={setIsModalActive} />
+        <Link to={"/donation"} className={styles.linkCharity} aria-label="prejsť na stránku donatov 2% z daní">
+          <p>Prosim o podpore nás 2% z daní</p>
+        </Link>
       </header>
-      <Link to={"/donation"} className={styles.linkCharity}>
-        <p>Prosim o podpore nás 2% z daní</p>
-      </Link>
     </>
   );
 };

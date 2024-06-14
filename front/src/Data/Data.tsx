@@ -1,4 +1,4 @@
-import { IDataList } from "../types/IFooter";
+import { IDataList } from "../types/Footer";
 
 export const hospitalData: IDataList = {
   titleList: "Mobilný hospic Most domov",

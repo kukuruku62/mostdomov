@@ -1,37 +1,33 @@
-import { Dispatch, PointerEvent, SetStateAction, useEffect, useId, useRef } from "react";
+import { MouseEvent, useEffect, useRef } from "react";
 import { NavLink } from "react-router-dom";
+import { IModalProps } from "../../types/Header";
 import styles from "./Modal.module.scss";
 
-interface ModalProps {
-  isModalActive: boolean;
-  setIsModalActive: Dispatch<SetStateAction<boolean>>;
-}
+export const Modal = ({ isModalActive, setIsModalActive }: IModalProps) => {
 
-export const Modal = ({ isModalActive, setIsModalActive }: ModalProps) => {
-  
   const menuData = [
     {
-      id: useId(),
+      id: "1",
       title: "O Nás",
       link: "/",
     },
     {
-      id: useId(),
+      id: "2",
       title: "Mobilný hospic",
       link: "/hospital",
     },
     {
-      id: useId(),
+      id: "3",
       title: "Odľahčovacia služba",
       link: "/service",
     },
     {
-      id: useId(),
+      id: "4",
       title: "Príbehy o dobrej smrti",
       link: "/stories",
     },
     {
-      id: useId(),
+      id: "5",
       title: "Kontaktujte nás",
       link: "/contacts",
     },
@@ -52,7 +48,7 @@ export const Modal = ({ isModalActive, setIsModalActive }: ModalProps) => {
     }
   }, [isModalActive]);
 
-  const handlerClick = (event: PointerEvent<HTMLUListElement>) => {
+  const handleClick = (event: MouseEvent<HTMLUListElement>) => {
     if (event.target instanceof HTMLAnchorElement) {
       setIsModalActive(false);
     }
@@ -61,12 +57,13 @@ export const Modal = ({ isModalActive, setIsModalActive }: ModalProps) => {
   return (
     <dialog ref={dialogRef} className={styles.modal}>
       <nav>
-        <ul ref={contentRef} className={styles.modalContent} onClick={handlerClick}>
+        <ul ref={contentRef} className={styles.modalContent} onClick={handleClick}>
           {menuData.map(({ id, link, title }) => (
             <li key={id}>
               <NavLink
                 to={link}
-                className={({ isActive }) => (isActive ? styles.linkActive : styles.link)}>
+                className={({ isActive }) => (isActive ? styles.linkActive : styles.link)}
+              >
                 {title}
               </NavLink>
             </li>
