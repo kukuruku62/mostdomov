@@ -1,10 +1,8 @@
 import { hospitalData, organizationData, contacts } from "../../Data/Data";
-import { ListData } from "../../components/ListData/ListData";
+import { ListData } from "../../shared/ListData/ListData";
 import styles from "./Contacts.module.scss";
 
-
 export const Contacts = () => {
-
   return (
     <section>
       <div className={styles.container}>
@@ -16,9 +14,9 @@ export const Contacts = () => {
             </p>
           </div>
           <ul className={styles.contactsContainer}>
-            {Object.values(contacts).map((el, index) => 
-            <li key={index}>{el}</li>
-            )}
+            {Object.values(contacts).map((el, index) => (
+              <li key={index}>{el}</li>
+            ))}
           </ul>
           <div className={styles.listsContainer}>
             <ListData {...hospitalData} variant="ligthTheme" />

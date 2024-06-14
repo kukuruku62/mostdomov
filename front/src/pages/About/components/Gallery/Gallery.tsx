@@ -1,17 +1,16 @@
-import { useId } from "react";
 import styles from "./Gallery.module.scss";
 
 export const Gallery = () => {
   const data = [
     {
-      id: useId(),
+      id: "1",
       url: "/static/img/1.webp",
       name: "Mudr. Zuzana Hajster Vozárová",
       profession: "Odborná garantka, lekárka",
       email: "hajstervozarova@mostdomov.com",
     },
     {
-      id: useId(),
+      id: "2",
       url: "/static/img/2.webp",
       name: "Mgr. Simona Hornačková, dipl.s.",
       profession: "Zdravotná sestra",
@@ -19,7 +18,7 @@ export const Gallery = () => {
     },
 
     {
-      id: useId(),
+      id: "3",
       url: "/static/img/3.webp",
       name: "Katarína Habláková",
       profession: "Prevádzková riaditeľka",

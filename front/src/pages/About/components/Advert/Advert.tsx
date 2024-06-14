@@ -1,16 +1,15 @@
-import { useId } from "react";
 import { Link } from "react-router-dom";
 import styles from "./Advert.module.scss";
 
 export const Advert = () => {
   const advertData = [
     {
-      id: useId(),
+      id: "1",
       name: "Eurokim",
       source: "static/img/Eurokim.jpg",
     },
     {
-      id: useId(),
+      id: "2",
       name: "Veolia",
       source: "static/img/Veolia.jpg",
       link: "https://www.nadaciavs.sk/",
